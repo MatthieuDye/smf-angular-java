@@ -16,17 +16,17 @@ public class UsersController {
     @Autowired
     UsersService usersService;
 
+    UserMapper userMapper;
+
     @GetMapping(path = UserApiPaths.LIST_USERS)
     public ResponseEntity<?> listUsers() {
-        log.info("UsersController:  list users");
         List<User> resource = usersService.getUsers();
         return ResponseEntity.ok(resource);
     }
 
     @PostMapping(path = UserApiPaths.ADD_USER)
-    public ResponseEntity<?> saveUser(@RequestBody User user) {
-        log.info("UsersController:  list users");
-        User resource = usersService.saveUser(user);
+    public ResponseEntity<?> saveUser(@RequestBody UserDTO userDTO) {
+        User resource = usersService.saveUser(userMapper.userDTOToUser(userDTO));
         return ResponseEntity.ok(resource);
     }
 }
