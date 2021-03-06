@@ -1,7 +1,10 @@
-package com.app;
+package com.app.services;
 
 import java.util.List;
 
+import com.app.dtos.FormNewUserDTO;
+import com.app.repositories.UsersRepository;
+import com.app.entities.User;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,7 +20,11 @@ public class UsersService {
         return usersRepository.findAll();
     }
 
-    public User saveUser(User user) {
+    public User saveUser(FormNewUserDTO formNewUserDTO) {
+        User user = new User();
+        user.setEmail(formNewUserDTO.getEmail());
+        user.setFirstName(formNewUserDTO.getFirstName());
+        user.setLastName(formNewUserDTO.getLastName());
         return usersRepository.save(user);
     }
 

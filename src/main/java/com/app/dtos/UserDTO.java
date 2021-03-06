@@ -1,11 +1,12 @@
-package com.app;
+package com.app.dtos;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
+@NoArgsConstructor
 public class UserDTO {
     private long id;
-    private String firstName;
+    @Getter @Setter private String firstName;
     private String lastName;
     private String email;
 }

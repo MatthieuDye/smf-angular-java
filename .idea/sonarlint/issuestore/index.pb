@@ -251,8 +251,6 @@ W
 'src/main/java/com/app/UsersService.java,0\e\0ea7b99c25bf30e1a845c3ede22994d8c68a2008
 Y
 )src/main/resources/application.properties,0\6\06f65155ec73600b9fc5c4dc2883d4bb84d8e284
-K
-src/main/resources/data.sql,7\3\73d31a43eeb5160da7670a8c11a94a16128cf92d
 m
 =src/main/smfpoc-front/src/app/auth/login/login.component.html,a\1\a1921f89e94bab6283b9e244a8d4064c95148593
 m
